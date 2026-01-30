@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  /* Cores Primárias - Natureza & Elegância */
+  --forest-green: #2D5A3D;
+  --forest-green-light: #3D7A52;
+  --forest-green-dark: #1D3A2D;
+  --sky-blue: #87CEEB;
+  --sky-blue-light: #B0E0F0;
+  --sky-blue-dark: #5BAED8;
+  --sunset-orange: #E97451;
+  --sunset-orange-light: #F09070;
+  --sunset-orange-dark: #D05030;
+
+  /* Cores Neutras */
+  --cream: #FDF8F3;
+  --cream-dark: #F5EDE3;
+  --charcoal: #2C3E50;
+  --charcoal-light: #34495E;
+
+  /* Sistema */
+  --background: #FDF8F3;
+  --foreground: #2C3E50;
+  --muted: #6B7C8C;
+  --border: #E5DDD3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest: var(--forest-green);
+  --color-forest-light: var(--forest-green-light);
+  --color-forest-dark: var(--forest-green-dark);
+  --color-sky: var(--sky-blue);
+  --color-sky-light: var(--sky-blue-light);
+  --color-sky-dark: var(--sky-blue-dark);
+  --color-sunset: var(--sunset-orange);
+  --color-sunset-light: var(--sunset-orange-light);
+  --color-sunset-dark: var(--sunset-orange-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1A2530;
+    --foreground: #F5EDE3;
+    --muted: #8A9BAC;
+    --border: #2C3E50;
+    --cream: #1A2530;
+    --cream-dark: #243040;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--forest-green);
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--forest-green);
+  outline-offset: 2px;
+}
